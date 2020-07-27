@@ -1,0 +1,47 @@
+<div class="container">
+  <mat-card>
+    <form (submit)="onSignup(signUpForm)" #signUpForm="ngForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your username</mat-label>
+        <input
+          type="text"
+          matInput
+          placeholder="soMeUserName min 6 characters"
+          required
+          name="username"
+          ngModel
+          #usernameInput="ngModel"
+        />
+        <mat-error></mat-error> </mat-form-field
+      ><br />
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input
+          type="email"
+          matInput
+          placeholder="pat@example.com"
+          required
+          email
+          name="email"
+          ngModel
+          #emailInput="ngModel"
+        />
+        <mat-error></mat-error> </mat-form-field
+      ><br />
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input
+          type="password"
+          matInput
+          placeholder="123456"
+          required
+          name="password"
+          ngModel
+          #passwordInput="ngModel"
+        />
+        <mat-error></mat-error> </mat-form-field
+      ><br />
+      <button mat-flat-button color="accent" type="submit">Sign Up</button>
+    </form>
+  </mat-card>
+</div>

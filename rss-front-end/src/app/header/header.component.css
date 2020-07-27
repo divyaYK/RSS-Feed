@@ -1,0 +1,15 @@
+mat-toolbar {
+  justify-content: center;
+  font-size: 1rem;
+  padding: 3rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  margin: 0 2rem;
+}
+
+a:active {
+  font-size: 3rem;
+}

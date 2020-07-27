@@ -1,0 +1,6 @@
+<mat-toolbar color="primary">
+  <a *ngIf="userAuthenticated" routerLink="papers" routerLinkActive="active">Main Feed</a>
+  <a *ngIf="!userAuthenticated" routerLink="/" routerLinkActive="active">Sign Up</a>
+  <a *ngIf="!userAuthenticated" routerLink="/login" routerLinkActive="active">Login</a>
+  <button *ngIf="userAuthenticated" mat-button>Logout</button>
+</mat-toolbar>

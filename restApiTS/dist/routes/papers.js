@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const router = express_1.Router();
+const paper_controller_1 = require("../controllers/paper.controller");
+const verifyToken_1 = require("../util/verifyToken");
+router.get('/', verifyToken_1.TokenValidation, paper_controller_1.getAllPapers);
+router.post('/get-by-title', verifyToken_1.TokenValidation, paper_controller_1.getPaperByTitle);
+router.post('/get-by-date', verifyToken_1.TokenValidation, paper_controller_1.getPaperByDate);
+router.post('/get-in-date-range', verifyToken_1.TokenValidation, paper_controller_1.getPapersByDateRange);
+exports.default = router;
